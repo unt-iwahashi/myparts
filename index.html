@@ -16,6 +16,7 @@
 </head>
 
 <body>
+  <div class="js_cursor"></div>
   <header class="ly_header">
     <div class="ly_header_inner">
       <h1>myParts_HTML + CSS + TS</h1>
@@ -24,87 +25,96 @@
   <main class="ly_main">
     <div class="ly_main_inner">
       <section class="bl_parts_section">
-        <h2 class="bl_parts_heading js-toggleAccordion-trigger" aria-expanded="false">ボタン（ホバーアニメーション）</h2>
-        <div class="bl_parts_wrap js-toggleAccordion-panel" aria-hidden="true">
+        <h2 class="bl_parts_heading js_toggleAccordion_trigger" aria-expanded="false">ボタン（装飾）</h2>
+        <div class="bl_parts_wrap js_toggleAccordion_panel" aria-hidden="true">
           <div class="bl_parts_sampleWrap">
-            <div class="el_parts_title"><span>背景が斜めに流れる</span></div>
-            <div class="bl_parts_sample"><a class="el_button -anime01" href="#">サンプルボタン</a></div>
+            <div class="el_parts_title"><span>シャドウ①</span></div>
+            <div class="bl_parts_sample"><a class="el_button -decoration_shadow01" href="#">サンプルボタン</a></div>
             <div class="bl_parts_code">
               <p class="el_parts_type -pug">Pug</p>
               <pre class="line-numbers"><code class="language-html">a(href="#").el_button サンプルボタン</code></pre>
               <p class="el_parts_type -sass">Sass</p>
               <pre class="line-numbers"><code class="language-scss">.el_button {
-   position: relative;
+   display: inline-flex;
    padding: 1rem 2rem;
-   border-radius: 5px;
-   border: 1px solid $color-black;
-   background-color: $color-white;
-   background-image: linear-gradient(135deg, $color-black 50%, transparent 50%);
-   background-position: 100%;
-   background-size: 300%;
-   color: $color-black;
-   text-decoration: none;
-   transition: background 0.5s ease-in-out, color 0.3s ease-in-out;
-   &:hover {
-     background-position: 0;
-     color: $color-white;
-   }
+   color: #000;
+   border: 1px solid #000;
+   box-shadow: 10px 10px 10px #ddd;
  }</code></pre>
             </div>
           </div>
           <div class="bl_parts_sampleWrap">
-            <div class="el_parts_title"><span>サンプルの動き</span></div>
-            <div class="bl_parts_sample"><a class="el_button" href="#">サンプルボタン</a></div>
+            <div class="el_parts_title"><span>シャドウ②</span></div>
+            <div class="bl_parts_sample"><a class="el_button -decoration_shadow02" href="#">サンプルボタン</a></div>
             <div class="bl_parts_code">
               <p class="el_parts_type -pug">Pug</p>
               <pre class="line-numbers"><code class="language-html">a(href="#").el_button サンプルボタン</code></pre>
               <p class="el_parts_type -sass">Sass</p>
               <pre class="line-numbers"><code class="language-scss">.el_button {
-   position: relative;
+   display: inline-flex;
    padding: 1rem 2rem;
-   border-radius: 5px;
-   border: 1px solid $color-black;
-   background-color: $color-white;
-   background-image: linear-gradient(135deg, $color-black 50%, transparent 50%);
-   background-position: 100%;
-   background-size: 300%;
-   color: $color-black;
-   text-decoration: none;
-   transition: background 0.5s ease-in-out, color 0.3s ease-in-out;
-   &:hover {
-     background-position: 0;
-     color: $color-white;
-   }
+   color: #000;
+   border: 1px solid #000;
+   box-shadow: 10px 10px #ddd;
+ }</code></pre>
+            </div>
+          </div>
+          <div class="bl_parts_sampleWrap">
+            <div class="el_parts_title"><span>線①</span></div>
+            <div class="bl_parts_sample"><a class="el_button -decoration_border01" href="#">サンプルボタン</a></div>
+            <div class="bl_parts_code">
+              <p class="el_parts_type -pug">Pug</p>
+              <pre class="line-numbers"><code class="language-html">a(href="#").el_button サンプルボタン</code></pre>
+              <p class="el_parts_type -sass">Sass</p>
+              <pre class="line-numbers"><code class="language-scss">.el_button {
+   display: inline-flex;
+   padding: 1rem 2rem;
+   color: #000;
+   border: 2px solid #000;
+   border-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% );
+   border-image-slice: 1;
  }</code></pre>
             </div>
           </div>
         </div>
       </section>
       <section class="bl_parts_section">
-        <h2 class="bl_parts_heading js-toggleAccordion-trigger" aria-expanded="false">ボタン（枠デザイン）</h2>
-        <div class="bl_parts_wrap js-toggleAccordion-panel" aria-hidden="true">
+        <h2 class="bl_parts_heading js_toggleAccordion_trigger" aria-expanded="false">ボタン（アニメーション）</h2>
+        <div class="bl_parts_wrap js_toggleAccordion_panel" aria-hidden="true">
           <div class="bl_parts_sampleWrap">
             <div class="el_parts_title"><span>背景が斜めに流れる</span></div>
-            <div class="bl_parts_sample"><a class="el_button -anime01" href="#">サンプルボタン</a></div>
+            <div class="bl_parts_sample"><a class="el_button -anime01" href="#"><span>サンプルボタン</span></a></div>
             <div class="bl_parts_code">
               <p class="el_parts_type -pug">Pug</p>
-              <pre class="line-numbers"><code class="language-html">a(href="#").el_button サンプルボタン</code></pre>
+              <pre class="line-numbers"><code class="language-html">a(href="#").el_button
+  span サンプルボタン</code></pre>
               <p class="el_parts_type -sass">Sass</p>
               <pre class="line-numbers"><code class="language-scss">.el_button {
+   display: inline-flex;
    position: relative;
    padding: 1rem 2rem;
-   border-radius: 5px;
-   border: 1px solid $color-black;
-   background-color: $color-white;
-   background-image: linear-gradient(135deg, $color-black 50%, transparent 50%);
-   background-position: 100%;
-   background-size: 300%;
-   color: $color-black;
-   text-decoration: none;
-   transition: background 0.5s ease-in-out, color 0.3s ease-in-out;
+   border: 1px solid #000;
+   color: #000;
+   overflow: hidden;
+   & > span {
+     position: relative;
+   }
+   &::before {
+     content: '';
+     position : absolute;
+     top: 0;
+     left: 30px;
+     width: 150%;
+     height: 400%;
+     transition: all 0.5s ease-out;
+     transform: translateX(-99%) translateY(-70%) rotate(135deg);
+     background: #000;
+   }
    &:hover {
-     background-position: 0;
      color: $color-white;
+     &::before {
+       transform: translateX(-12%) translateY(-25%) rotate(135deg);
+     }
    }
  }</code></pre>
             </div>
