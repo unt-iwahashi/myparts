@@ -23,13 +23,99 @@
     </div>
   </header>
   <main class="ly_main">
-    <div class="ly_main_inner">
+    <aside class="bl_side">
+      <nav>
+        <ul class="bl_side_list">
+          <li class="bl_side_category js_toggleAccordion_trigger" aria-expanded="false">見出し</li>
+          <li class="bl_side_item js_toggleAccordion_panel" aria-hidden="true"><a href="#button_deco">装飾</a></li>
+          <li class="bl_side_category js_toggleAccordion_trigger" aria-expanded="false">ボタン</li>
+          <li class="bl_side_item js_toggleAccordion_panel" aria-hidden="true"><a href="#button_deco">装飾</a><a href="#button_anime">アニメーション</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="bl_parts">
+      <h2 class="bl_parts_category">#見出し</h2>
       <section class="bl_parts_section">
-        <h2 class="bl_parts_heading js_toggleAccordion_trigger" aria-expanded="false">ボタン（装飾）</h2>
-        <div class="bl_parts_wrap js_toggleAccordion_panel" aria-hidden="true">
+        <h3 class="bl_parts_heading" id="button_deco">装飾</h3>
+        <div class="bl_parts_wrap">
           <div class="bl_parts_sampleWrap">
-            <div class="el_parts_title"><span>シャドウ①</span></div>
-            <div class="bl_parts_sample"><a class="el_button -decoration_shadow01" href="#">サンプルボタン</a></div>
+            <div class="bl_parts_sample">
+              <h1 class="el_heading -decoration01">サンプル見出しサンプル見出し</h1>
+            </div>
+            <div class="bl_parts_code">
+              <p class="el_parts_type -pug">Pug</p>
+              <pre class="line-numbers"><code class="language-html">h1.el_heading サンプル見出しサンプル見出し</code></pre>
+              <p class="el_parts_type -sass">Sass</p>
+              <pre class="line-numbers"><code class="language-scss">.el_heading {
+   position: relative;
+   padding-inline-start: 1em;
+   &::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 8px;
+     height: 100%;
+     background: #000;
+   }
+ }</code></pre>
+            </div>
+          </div>
+          <div class="bl_parts_sampleWrap">
+            <div class="bl_parts_sample">
+              <h1 class="el_heading -decoration02">サンプル見出しサンプル見出し</h1>
+            </div>
+            <div class="bl_parts_code">
+              <p class="el_parts_type -pug">Pug</p>
+              <pre class="line-numbers"><code class="language-html">h1.el_heading サンプル見出しサンプル見出し</code></pre>
+              <p class="el_parts_type -sass">Sass</p>
+              <pre class="line-numbers"><code class="language-scss">.el_heading {
+   position: relative;
+   &::before {
+     content: '';
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     height: 12px;
+     background: #fff538;
+     z-index: -1;
+   }
+ }</code></pre>
+            </div>
+          </div>
+          <div class="bl_parts_sampleWrap">
+            <div class="bl_parts_sample">
+              <h1 class="el_heading -decoration03">サンプル見出しサンプル見出し</h1>
+            </div>
+            <div class="bl_parts_code">
+              <p class="el_parts_type -pug">Pug</p>
+              <pre class="line-numbers"><code class="language-html">h1.el_heading サンプル見出しサンプル見出し</code></pre>
+              <p class="el_parts_type -sass">Sass</p>
+              <pre class="line-numbers"><code class="language-scss">.el_heading {
+   position: relative;
+   padding-block-end: 0.5em;
+   border-bottom: 4px solid #000;
+   &::before {
+     content: '';
+     position: absolute;
+     bottom: -4px;
+     left: 0;
+     width: 20%;
+     height: 4px;
+     background: #fff538;
+   }
+ }</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+      <h2 class="bl_parts_category">#ボタン</h2>
+      <section class="bl_parts_section">
+        <h3 class="bl_parts_heading" id="button_deco">装飾</h3>
+        <div class="bl_parts_wrap">
+          <div class="bl_parts_sampleWrap">
+            <div class="bl_parts_sample -center"><a class="el_button -decoration01" href="#">サンプルボタン</a></div>
             <div class="bl_parts_code">
               <p class="el_parts_type -pug">Pug</p>
               <pre class="line-numbers"><code class="language-html">a(href="#").el_button サンプルボタン</code></pre>
@@ -44,8 +130,7 @@
             </div>
           </div>
           <div class="bl_parts_sampleWrap">
-            <div class="el_parts_title"><span>シャドウ②</span></div>
-            <div class="bl_parts_sample"><a class="el_button -decoration_shadow02" href="#">サンプルボタン</a></div>
+            <div class="bl_parts_sample -center"><a class="el_button -decoration02" href="#">サンプルボタン</a></div>
             <div class="bl_parts_code">
               <p class="el_parts_type -pug">Pug</p>
               <pre class="line-numbers"><code class="language-html">a(href="#").el_button サンプルボタン</code></pre>
@@ -60,8 +145,7 @@
             </div>
           </div>
           <div class="bl_parts_sampleWrap">
-            <div class="el_parts_title"><span>線①</span></div>
-            <div class="bl_parts_sample"><a class="el_button -decoration_border01" href="#">サンプルボタン</a></div>
+            <div class="bl_parts_sample -center"><a class="el_button -decoration03" href="#">サンプルボタン</a></div>
             <div class="bl_parts_code">
               <p class="el_parts_type -pug">Pug</p>
               <pre class="line-numbers"><code class="language-html">a(href="#").el_button サンプルボタン</code></pre>
@@ -79,11 +163,10 @@
         </div>
       </section>
       <section class="bl_parts_section">
-        <h2 class="bl_parts_heading js_toggleAccordion_trigger" aria-expanded="false">ボタン（アニメーション）</h2>
-        <div class="bl_parts_wrap js_toggleAccordion_panel" aria-hidden="true">
+        <h3 class="bl_parts_heading" id="button_anime">アニメーション</h3>
+        <div class="bl_parts_wrap">
           <div class="bl_parts_sampleWrap">
-            <div class="el_parts_title"><span>背景が斜めに流れる</span></div>
-            <div class="bl_parts_sample"><a class="el_button -anime01" href="#"><span>サンプルボタン</span></a></div>
+            <div class="bl_parts_sample -center"><a class="el_button -anime01" href="#"><span>サンプルボタン</span></a></div>
             <div class="bl_parts_code">
               <p class="el_parts_type -pug">Pug</p>
               <pre class="line-numbers"><code class="language-html">a(href="#").el_button
@@ -115,32 +198,6 @@
      &::before {
        transform: translateX(-12%) translateY(-25%) rotate(135deg);
      }
-   }
- }</code></pre>
-            </div>
-          </div>
-          <div class="bl_parts_sampleWrap">
-            <div class="el_parts_title"><span>サンプルの動き</span></div>
-            <div class="bl_parts_sample"><a class="el_button" href="#">サンプルボタン</a></div>
-            <div class="bl_parts_code">
-              <p class="el_parts_type -pug">Pug</p>
-              <pre class="line-numbers"><code class="language-html">a(href="#").el_button サンプルボタン</code></pre>
-              <p class="el_parts_type -sass">Sass</p>
-              <pre class="line-numbers"><code class="language-scss">.el_button {
-   position: relative;
-   padding: 1rem 2rem;
-   border-radius: 5px;
-   border: 1px solid $color-black;
-   background-color: $color-white;
-   background-image: linear-gradient(135deg, $color-black 50%, transparent 50%);
-   background-position: 100%;
-   background-size: 300%;
-   color: $color-black;
-   text-decoration: none;
-   transition: background 0.5s ease-in-out, color 0.3s ease-in-out;
-   &:hover {
-     background-position: 0;
-     color: $color-white;
    }
  }</code></pre>
             </div>
